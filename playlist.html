@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Playlist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Music Playlist</h1>
+    <ul>
+        {% for song in playlist %}
+            <li>
+                {{ song.title }} by {{ song.artist }}
+                (<a href="{{ song.uri }}">Listen on Spotify</a>)
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
