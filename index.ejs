@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist Generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate a Playlist</h1>
+        <form action="/generate-playlist" method="get">
+            <div class="form-group">
+                <label for="genre">Select Genre:</label>
+                <select name="genre" id="genre" required>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="hip-hop">Hip-Hop</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="classical">Classical</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mood">Select Mood:</label>
+                <select name="mood" id="mood" required>
+                    <option value="energetic">Energetic</option>
+                    <option value="calm">Calm</option>
+                    <option value="danceable">Danceable</option>
+                    <option value="chill">Chill</option>
+                </select>
+            </div>
+            <button type="submit">Generate Playlist</button>
+        </form>
+    </div>
+</body>
+</html>
