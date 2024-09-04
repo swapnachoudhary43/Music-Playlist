@@ -1,0 +1,106 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Playlist Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .controls {
+            margin-bottom: 30px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        button {
+            background-color: #1DB954;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1ed760;
+        }
+        .playlist {
+            width: 80%;
+            max-width: 800px;
+        }
+        .track {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #282828;
+        }
+        .track img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+        .track-info {
+            flex-grow: 1;
+        }
+        .track-title {
+            font-size: 18px;
+            margin: 0;
+        }
+        .track-artist {
+            font-size: 14px;
+            color: #b3b3b3;
+            margin: 5px 0 0 0;
+        }
+        .track a {
+            color: #1DB954;
+            text-decoration: none;
+        }
+        .track a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spotify Playlist Generator</h1>
+    <div class="controls">
+        <select id="genre">
+            <option value="" disabled selected>Select Genre</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="hip-hop">Hip-Hop</option>
+            <option value="jazz">Jazz</option>
+            <option value="classical">Classical</option>
+            <option value="electronic">Electronic</option>
+            <option value="country">Country</option>
+            <option value="blues">Blues</option>
+            <!-- Add more genres as needed -->
+        </select>
+
+        <select id="mood">
+            <option value="" disabled selected>Select Mood</option>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="energetic">Energetic</option>
+            <option value="calm">Calm</option>
+            <!-- Add more moods as needed -->
+        </select>
+
+        <button id="generateBtn">Generate Playlist</button>
+    </div>
+
+    <div class="playlist" id="playlist"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
